@@ -4,8 +4,8 @@
   import BrainPart from './BrainPart.svelte';
 
   interactivity({
-    filter: (hits) => {
-      return hits ? [hits[0]] : [];
+    filter: (hits, _) => {
+      return hits.length>0 ? [hits[0]] : [];
     }
   });
   const brain = useGltf("/models/brain2.glb");
